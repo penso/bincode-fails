@@ -1,0 +1,19 @@
+[package]
+name = "bincode-fail"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+bincode = { git = "https://github.com/bincode-org/bincode", features = ["serde", "alloc"] }
+serde_json = { version = "^1" }
+serde = "1"
+tendermint = "0.33"
+tendermint-rpc = { version = "0.33", features = [
+  "websocket-client",
+  "http-client",
+] }
+tendermint-abci = "0.33"
+rust-lzma = "0.6"
+anyhow = "1"
